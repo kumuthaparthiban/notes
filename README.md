@@ -10,9 +10,6 @@ Git is easy to learn, and has fast performance. It is superior to other SCM tool
 
 # Features of Git
 
-
-![image](https://user-images.githubusercontent.com/101272283/157679699-7f570d73-2b10-4c0e-b86c-96b10b008666.png)
-
 ![Features](https://static.javatpoint.com/tutorial/git/images/features-of-git.jpg)
 
 Some remarkable features of Git are as follows:
