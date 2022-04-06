@@ -1,0 +1,45 @@
+Student details maintenance using PHP with MySQL
+Database connectivity
+
+
+
+<html>
+   <head>
+      <title>Creating MySQL Table</title>
+   </head>
+   <body>
+      <?php
+        $host = 'localhost:3306';  
+$user = '';  
+$pass = '';  
+$dbname = 'test';  
+         $mysqli = new mysqli($host, $user, $pass, $dbname);
+         
+         if($mysqli->connect_errno ) {
+            printf("Connect failed: %s<br />", $mysqli->connect_error);
+            exit();
+         }
+         printf('Connected successfully.<br />');
+         $sql = "SELECT sid, sname FROM stud";
+		 
+         $result = $mysqli->query($sql);
+           
+         if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+               printf("Id: %s, StudentName: %s <br />", 
+                  $row["sid"], 
+                  $row["sname"]);
+                     
+            }
+         } else {
+            printf('No record found.<br />');
+         }
+         mysqli_free_result($result);
+         $mysqli->close();
+      ?>
+   </body>
+</html>
+
+
+
+
